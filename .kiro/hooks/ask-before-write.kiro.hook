@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Ask Before Writing",
+  "description": "Always ask the user for permission and explain the changes before modifying any file. Never edit files without explicit approval.",
+  "version": "1",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "STOP. Before making this file change, you MUST first explain to the user what you're about to change and why, then ask for their explicit permission before proceeding. Do not write to any file without the user saying yes."
+  }
+}
